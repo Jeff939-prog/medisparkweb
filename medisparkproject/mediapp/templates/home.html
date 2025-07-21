@@ -1,11 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medispark</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medispark</title>
+  <style>
+    :root {
+      --light-blue: #87CEEB;
+      --dark-brown: #5D4037;
+      --black: #000000;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      padding: 1rem;
+    }
+
+    header {
+      background: var(--light-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .button-primary {
+      margin-top: 1.5rem;
+      background-color: var(--dark-brown);
+      color: var(--white);
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button-primary:hover {
+      background-color: var(--black);
+      transform: scale(1.05);
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--dark-brown);
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin: 3rem 0;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: var(--dark-brown);
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
+
+  <header>
     <h1>Welcome to Medispark</h1>
+    <p>Innovative Healthcare. Delivered with Compassion.</p>
+    <button class="button-primary" onclick="learnMore()">Learn More</button>
+  </header>
+
+  <section class="cards-container">
+    <div class="card">
+      <h3>Mobile Clinics</h3>
+      <p>We bring quality medical care to rural and underserved communities across Zimbabwe through fully equipped mobile units operated by trained professionals.</p>
+    </div>
+    <div class="card">
+      <h3>Dialysis Centre</h3>
+      <p>A first-of-its-kind affordable dialysis centre in Highfields, designed to serve low-income patients with kidney conditions in need of regular care.</p>
+    </div>
+    <div class="card">
+      <h3>Health Education</h3>
+      <p>Community-focused programs including maternal health talks, youth wellness training, and chronic disease awareness campaigns.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Vision</h2>
+    <p>To become Zimbabwe’s leading healthcare innovation hub delivering accessible, high-quality and dignified medical services to marginalized communities nationwide.</p>
+  </section>
+
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p>Medispark exists to bridge the healthcare gap through mobile outreach, community partnerships, patient-centered care, and sustainable medical solutions for all Zimbabweans, especially in low-resource settings.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Medispark Healthcare Solutions | Powered by Vision. Grounded in Care.
+  </footer>
+
+  <script>
+    function learnMore() {
+      alert("Explore our services, mission, and upcoming community outreach. Full platform launching soon!");
+    }
+  </script>
+
 </body>
 </html>
